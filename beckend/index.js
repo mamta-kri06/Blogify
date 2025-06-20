@@ -25,7 +25,7 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
-  res.send("hello");
+  res.redirect("https://inspiring-cat-17194d.netlify.app/");
 });
 app.use("/auth", AuthRoutes);
 app.use("/blog", BlogRoutes);
