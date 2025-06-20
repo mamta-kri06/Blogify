@@ -25,7 +25,7 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
-  res.redirect(process.env.FRONTEND_URL);
+  res.send("hello from server);
 });
 app.use("/auth", AuthRoutes);
 app.use("/blog", BlogRoutes);
