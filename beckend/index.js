@@ -25,7 +25,7 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
-  res.send("hello from server);
+  res.send("hello");
 });
 app.use("/auth", AuthRoutes);
 app.use("/blog", BlogRoutes);
