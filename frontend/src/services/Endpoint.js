@@ -5,9 +5,6 @@ export const BaseUrl = "https://blogify-1-cli1.onrender.com/";
 const instance = axios.create({
   baseURL: BaseUrl,
   withCredentials: true,
-  headers: {
-    "Content-Type": isFormData ? "multipart/form-data" : "application/json",
-  },
 });
 
 // General GET request
