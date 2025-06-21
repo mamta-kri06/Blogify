@@ -14,7 +14,9 @@ function Allpost() {
     try {
       const response = await get("/blog/getposts");
       setPost(response.data.posts);
-    } catch (error) {}
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   useEffect(() => {

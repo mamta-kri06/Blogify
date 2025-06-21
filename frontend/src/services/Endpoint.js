@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const BaseUrl = "https://blogify-1-cli1.onrender.com/";
+export const BaseUrl = "http://localhost:8000/";
 
 const instance = axios.create({
   baseURL: BaseUrl,
