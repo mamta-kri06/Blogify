@@ -2,7 +2,7 @@
 
 Blogify is a full-stack MERN blogging application where users can create,and explore blogs. It includes secure authentication with jwt and bcrypt, image upload via Cloudinary, role-based access, and an elegant dashboard experience.
 
-[Blogify Live](https://blogify-frontend-gh0m.onrender.com/)
+[Live Demo](https://blogify-frontend-gh0m.onrender.com/)
 
 ---
 
