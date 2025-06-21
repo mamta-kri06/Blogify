@@ -18,9 +18,7 @@ export default function Blog() {
         const request = await get(`/public/Singlepost/${postId}`);
         const response = request.data;
         setSinglePost(response.Post);
-      } catch (error) {
-        console.log(error);
-      }
+      } catch (error) {}
     };
     fetchSinglePost();
   }, [loaddata, postId]);

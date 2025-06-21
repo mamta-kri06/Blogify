@@ -30,10 +30,7 @@ function Login() {
         toast.success(data.message);
         dispatch(setUser(data.user));
       }
-      console.log(response);
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
   };
 
   return (

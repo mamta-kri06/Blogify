@@ -17,10 +17,7 @@ export default function Dashboard() {
         setPost(data.posts);
         setUser(data.users);
         setComment(data.comments);
-        console.log(response);
-      } catch (error) {
-        console.log(error);
-      }
+      } catch (error) {}
     };
     GetData();
   }, []);

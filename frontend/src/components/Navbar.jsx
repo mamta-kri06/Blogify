@@ -21,9 +21,7 @@ function Navbar() {
         toast.success(response.data.message);
         navigate("/login");
       }
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
   };
 
   return (

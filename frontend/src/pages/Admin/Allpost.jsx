@@ -14,9 +14,7 @@ function Allpost() {
     try {
       const response = await get("/blog/getposts");
       setPost(response.data.posts);
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
   };
 
   useEffect(() => {
@@ -36,7 +34,6 @@ function Allpost() {
         alert("Post deleted successfully");
       }
     } catch (error) {
-      console.error(error);
       alert("Error deleting post");
     }
   };

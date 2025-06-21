@@ -11,9 +11,7 @@ export default function User() {
         const response = await get("/dashboard");
         const data = response.data;
         setUsers(data.users); // Assuming API returns { users: [...] }
-        console.log(data);
       } catch (error) {
-        console.log(error);
         toast.error("Failed to fetch users");
       }
     };
@@ -32,7 +30,6 @@ export default function User() {
         toast.error("Failed to delete user");
       }
     } catch (error) {
-      console.log(error);
       toast.error(error.response?.data?.message || "Delete failed");
     }
   };

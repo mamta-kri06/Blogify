@@ -14,9 +14,7 @@ function Recentpost() {
     try {
       const response = await get("/blog/getposts");
       setPost(response.data.posts);
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
   };
 
   useEffect(() => {
