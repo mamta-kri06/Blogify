@@ -24,7 +24,6 @@ const addComment = async (req, res) => {
       comment: newComment,
     });
   } catch (error) {
-    console.log(error);
     return res
       .status(500)
       .json({ success: false, message: "Internal server error" });

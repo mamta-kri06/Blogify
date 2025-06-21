@@ -29,7 +29,6 @@ const Register = async (req, res) => {
       user: NewUser,
     });
   } catch (error) {
-    console.log(error);
     return res
       .status(500)
       .json({ success: false, message: "Internal server error" });
@@ -72,7 +71,6 @@ const Login = async (req, res) => {
       token,
     });
   } catch (error) {
-    console.log("error");
     return res
       .status(500)
       .json({ success: false, message: "Internal server error" });
@@ -83,7 +81,6 @@ const Logout = async (req, res) => {
     res.clearCookie("token");
     res.status(200).json({ success: true, message: "Logout successful" });
   } catch (error) {
-    console.log("error");
     return res
       .status(500)
       .json({ success: false, message: "Ianternal server error" });

@@ -6,10 +6,6 @@ const Create = async (req, res) => {
   try {
     const { title, desc } = req.body;
     const imagePath = req.file.path;
-    console.log(req);
-    console.log(req.file);
-    console.log(req.file.filename);
-    console.log(req.file.path);
     const Blog = new PostModel({
       title,
       desc,
@@ -23,7 +19,6 @@ const Create = async (req, res) => {
       post: Blog,
     });
   } catch (error) {
-    console.log(error);
     return res
       .status(500)
       .json({ success: false, message: "Internal server error" });
@@ -53,7 +48,6 @@ const deleteBlog = async (req, res) => {
       post: deletePost,
     });
   } catch (error) {
-    console.log(error);
     return res
       .status(500)
       .json({ success: false, message: "Internal server error" });
@@ -68,7 +62,6 @@ const getposts = async (req, res) => {
     }
     return res.status(200).json({ success: true, posts });
   } catch (error) {
-    console.log(error);
     return res
       .status(500)
       .json({ success: false, message: "Internal server error" });
@@ -102,7 +95,6 @@ const update = async (req, res) => {
       post: post,
     });
   } catch (error) {
-    console.log(error);
     return res
       .status(500)
       .json({ success: false, message: "Internal server error" });
