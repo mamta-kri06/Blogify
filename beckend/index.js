@@ -12,10 +12,12 @@ import cors from "cors";
 dotenv.config();
 const PORT = process.env.PORT || 3000;
 const app = express();
-const corsOptions = {
-  origin: true,
-  credentials: true,
-};
+app.use(
+  cors({
+    origin: process.env.FRONTEND_URL,
+    credentials: true,
+  })
+);
 
 //mongodb connection
 DBconnection();
@@ -25,7 +27,7 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
-  res.redirect("https://inspiring-cat-17194d.netlify.app/auth/login");
+  res.redirect("/");
 });
 app.use("/auth", AuthRoutes);
 app.use("/blog", BlogRoutes);
