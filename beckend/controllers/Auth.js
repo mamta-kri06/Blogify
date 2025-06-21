@@ -83,7 +83,7 @@ const Logout = async (req, res) => {
   } catch (error) {
     return res
       .status(500)
-      .json({ success: false, message: "Ianternal server error" });
+      .json({ success: false, message: "Ieanternal server error" });
   }
 };
 export { Register, Login, Logout };
